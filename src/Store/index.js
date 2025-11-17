@@ -1,16 +1,20 @@
 import { create } from "zustand";
 
+const DEFAULT_COLOR = "#adb5bd";
+const DEFAULT_SCALE = 0.08;
+const DEFAULT_TEXTURE = '/videos/feature-1.mp4';
+
 const useMacBookStore = create((set) => ({
-    color: "#adb5bd",
+    color: DEFAULT_COLOR,
     setColor: (color) => set({ color }),
 
-    scale: 0.08,
+    scale: DEFAULT_SCALE,
     setScale: (scale) => set({ scale }),
 
-    texture: '/videos/feature-1.mp4',
+    texture: DEFAULT_TEXTURE,
     setTexture: (texture) => set({ texture }),
 
-    reset: () => set({ color: "#adb5bd", scale: 0.08, texture: '/videos/feature-1.mp4' }),
+    reset: () => set({ color: DEFAULT_COLOR, scale: DEFAULT_SCALE, texture: DEFAULT_TEXTURE }),
 }))
 
 export default useMacBookStore;
