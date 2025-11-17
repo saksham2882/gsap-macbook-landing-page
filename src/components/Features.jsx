@@ -18,6 +18,7 @@ const ModelScroll = () => {
 
     // Pre-load all feature videos during component mount
     useEffect(() => {
+        const videoElements = [];
         featureSequence.forEach((feature) => {
             const v = document.createElement('video');
 
@@ -30,9 +31,17 @@ const ModelScroll = () => {
             })
 
             v.load()
+            videoElements.push(v);
         })
-    }, [])
 
+        return () => {
+            videoElements.forEach(v => {
+                v.src = '';
+                v.load();
+            });
+        };
+    }, [])
+    
     // Update texture based on scroll position
     useGSAP(() => {
         // 3D MODEL ROTATION ANIMATION
