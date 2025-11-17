@@ -31,7 +31,14 @@ const Showcase = () => {
   return (
     <section id="showcase">
         <div className="media">
-            <video src="/videos/game.mp4" loop muted autoPlay playsInline/>
+            <video 
+                src="/videos/game.mp4" 
+                loop 
+                muted 
+                autoPlay 
+                playsInline
+                aria-label="Gameplay demonstration showcasing M4 chip performance"
+            />
 
             <div className="mask">
                 <img src="/mask-logo.svg" alt="Apple logo mask overlay" />
