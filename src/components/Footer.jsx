@@ -30,12 +30,12 @@ const Footer = () => {
             <a 
                 href="https://saksham-agrahari.vercel.app/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 opacity-50 hover:opacity-70 transition-opacity duration-300 underline underline-offset-2"
             >
                 Saksham Agrahari
             </a>
-        </div>
-    </footer>
+        </div>    </footer>
   )
 }
 export default Footer
